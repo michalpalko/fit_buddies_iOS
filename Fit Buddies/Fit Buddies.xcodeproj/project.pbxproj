@@ -3,19 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5284165F2585819B00D708DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5284165E2585819B00D708DF /* GoogleService-Info.plist */; };
 		52F43646257BA0CA0040A4D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F43645257BA0CA0040A4D0 /* AppDelegate.swift */; };
 		52F43648257BA0CA0040A4D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F43647257BA0CA0040A4D0 /* SceneDelegate.swift */; };
 		52F4364A257BA0CA0040A4D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F43649257BA0CA0040A4D0 /* ViewController.swift */; };
 		52F4364D257BA0CA0040A4D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F4364B257BA0CA0040A4D0 /* Main.storyboard */; };
 		52F4364F257BA0CE0040A4D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F4364E257BA0CE0040A4D0 /* Assets.xcassets */; };
 		52F43652257BA0CE0040A4D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F43650257BA0CE0040A4D0 /* LaunchScreen.storyboard */; };
+		5E117B32FB733628F66BC6EB /* Pods_Fit_Buddies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B50ABBD9898B39B468DBBA /* Pods_Fit_Buddies.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		053470D6766D911452D82A99 /* Pods-Fit Buddies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit Buddies.release.xcconfig"; path = "Target Support Files/Pods-Fit Buddies/Pods-Fit Buddies.release.xcconfig"; sourceTree = "<group>"; };
+		5284165E2585819B00D708DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52F43642257BA0CA0040A4D0 /* Fit Buddies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fit Buddies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F43645257BA0CA0040A4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52F43647257BA0CA0040A4D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		52F4364E257BA0CE0040A4D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52F43651257BA0CE0040A4D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52F43653257BA0CE0040A4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74B5C2380B296FD90A843500 /* Pods-Fit Buddies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit Buddies.debug.xcconfig"; path = "Target Support Files/Pods-Fit Buddies/Pods-Fit Buddies.debug.xcconfig"; sourceTree = "<group>"; };
+		F6B50ABBD9898B39B468DBBA /* Pods_Fit_Buddies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fit_Buddies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E117B32FB733628F66BC6EB /* Pods_Fit_Buddies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		050EE6D01FD6E2E76C59783A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6B50ABBD9898B39B468DBBA /* Pods_Fit_Buddies.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		52F43639257BA0CA0040A4D0 = {
 			isa = PBXGroup;
 			children = (
 				52F43644257BA0CA0040A4D0 /* Fit Buddies */,
 				52F43643257BA0CA0040A4D0 /* Products */,
+				8E830B6A969C134E33AC0A40 /* Pods */,
+				050EE6D01FD6E2E76C59783A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +73,7 @@
 		52F43644257BA0CA0040A4D0 /* Fit Buddies */ = {
 			isa = PBXGroup;
 			children = (
+				5284165E2585819B00D708DF /* GoogleService-Info.plist */,
 				52F43645257BA0CA0040A4D0 /* AppDelegate.swift */,
 				52F43647257BA0CA0040A4D0 /* SceneDelegate.swift */,
 				52F43649257BA0CA0040A4D0 /* ViewController.swift */,
@@ -67,6 +85,15 @@
 			path = "Fit Buddies";
 			sourceTree = "<group>";
 		};
+		8E830B6A969C134E33AC0A40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74B5C2380B296FD90A843500 /* Pods-Fit Buddies.debug.xcconfig */,
+				053470D6766D911452D82A99 /* Pods-Fit Buddies.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52F43656257BA0CE0040A4D0 /* Build configuration list for PBXNativeTarget "Fit Buddies" */;
 			buildPhases = (
+				6138EF87B7275204AD4237ED /* [CP] Check Pods Manifest.lock */,
 				52F4363E257BA0CA0040A4D0 /* Sources */,
 				52F4363F257BA0CA0040A4D0 /* Frameworks */,
 				52F43640257BA0CA0040A4D0 /* Resources */,
+				FC5544897C62EC3EC82267A1 /* [CP] Embed Pods Frameworks */,
+				0F86EBC735A999857E77709F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,11 +156,71 @@
 			files = (
 				52F43652257BA0CE0040A4D0 /* LaunchScreen.storyboard in Resources */,
 				52F4364F257BA0CE0040A4D0 /* Assets.xcassets in Resources */,
+				5284165F2585819B00D708DF /* GoogleService-Info.plist in Resources */,
 				52F4364D257BA0CA0040A4D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F86EBC735A999857E77709F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fit Buddies/Pods-Fit Buddies-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fit Buddies/Pods-Fit Buddies-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fit Buddies/Pods-Fit Buddies-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6138EF87B7275204AD4237ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fit Buddies-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC5544897C62EC3EC82267A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fit Buddies/Pods-Fit Buddies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fit Buddies/Pods-Fit Buddies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fit Buddies/Pods-Fit Buddies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52F4363E257BA0CA0040A4D0 /* Sources */ = {
@@ -283,6 +373,7 @@
 		};
 		52F43657257BA0CE0040A4D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74B5C2380B296FD90A843500 /* Pods-Fit Buddies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +393,7 @@
 		};
 		52F43658257BA0CE0040A4D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 053470D6766D911452D82A99 /* Pods-Fit Buddies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
