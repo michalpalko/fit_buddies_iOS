@@ -248,11 +248,23 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MX0-Ae-qPk" customClass="GIDSignInButton">
-                                <rect key="frame" x="82" y="499" width="250" height="50"/>
+                                <rect key="frame" x="107" y="499" width="200" height="50"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="UtY-wP-tYs"/>
+                                    <constraint firstAttribute="width" constant="200" id="UtY-wP-tYs"/>
                                     <constraint firstAttribute="height" constant="50" id="mi5-NK-EvU"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwM-SP-Wdf" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="107" y="564" width="200" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="q6Y-4w-3f8"/>
+                                    <constraint firstAttribute="height" constant="50" id="rU1-Vn-28B"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="rbn-Tg-dr5" id="VbI-ZA-ATY"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0oV-WO-p08"/>
@@ -264,6 +276,8 @@
                             <constraint firstItem="GAU-Bd-eLn" firstAttribute="leading" secondItem="0oV-WO-p08" secondAttribute="leading" constant="20" id="Eln-u5-PYF"/>
                             <constraint firstItem="Eqo-OO-EWD" firstAttribute="leading" secondItem="0oV-WO-p08" secondAttribute="leading" constant="20" id="JrL-J2-wby"/>
                             <constraint firstItem="0oV-WO-p08" firstAttribute="trailing" secondItem="1Vj-nU-FXb" secondAttribute="trailing" constant="20" id="KZB-9k-Y0d"/>
+                            <constraint firstItem="wwM-SP-Wdf" firstAttribute="centerX" secondItem="MLO-jb-dhS" secondAttribute="centerX" id="Kp5-rL-tOU"/>
+                            <constraint firstItem="wwM-SP-Wdf" firstAttribute="top" secondItem="MX0-Ae-qPk" secondAttribute="bottom" constant="15" id="Mmy-Mp-PO0"/>
                             <constraint firstItem="vtx-SY-zGc" firstAttribute="top" secondItem="Eqo-OO-EWD" secondAttribute="bottom" constant="30" id="ZSO-qV-gip"/>
                             <constraint firstItem="0oV-WO-p08" firstAttribute="trailing" secondItem="vtx-SY-zGc" secondAttribute="trailing" constant="20" id="bRg-Ay-EmG"/>
                             <constraint firstItem="0oV-WO-p08" firstAttribute="trailing" secondItem="GAU-Bd-eLn" secondAttribute="trailing" constant="20" id="ljf-dm-fkK"/>

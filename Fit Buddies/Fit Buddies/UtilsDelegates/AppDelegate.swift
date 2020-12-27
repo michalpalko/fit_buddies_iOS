@@ -8,15 +8,23 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FBSDKCoreKit
+import FBSDKLoginKit
+import FBSDKShareKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+        
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         
         return true
     }
@@ -50,10 +58,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 print(e.localizedDescription)
                 return
             }
-            UserDefaults.standard.set(Auth.auth().currentUser!.uid, forKey: "user_uid_key")
+            UserDefaults.standard.set(Auth.auth().currentUser?.uid, forKey: "user_uid_key")
             UserDefaults.standard.synchronize()
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let mainTabBarController = storyBoard.instantiateViewController(identifier: "MainTabBarController")
+            let mainTabBarController = self.storyBoard.instantiateViewController(identifier: "MainTabBarController")
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
             print("User is signed in with Firebase.")
         }
@@ -62,7 +69,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     @available(iOS 9.0, *)
     func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
     -> Bool {
-        return GIDSignIn.sharedInstance().handle(url)
+        let googleAuthentication = GIDSignIn.sharedInstance().handle(url)
+        let facebookAuthentication = ApplicationDelegate.shared.application(application, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+        return googleAuthentication || facebookAuthentication
     }
+    
 }
 
