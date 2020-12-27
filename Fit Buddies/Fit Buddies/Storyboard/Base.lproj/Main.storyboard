@@ -247,6 +247,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MX0-Ae-qPk" customClass="GIDSignInButton">
+                                <rect key="frame" x="82" y="499" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="UtY-wP-tYs"/>
+                                    <constraint firstAttribute="height" constant="50" id="mi5-NK-EvU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0oV-WO-p08"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -260,8 +267,10 @@
                             <constraint firstItem="vtx-SY-zGc" firstAttribute="top" secondItem="Eqo-OO-EWD" secondAttribute="bottom" constant="30" id="ZSO-qV-gip"/>
                             <constraint firstItem="0oV-WO-p08" firstAttribute="trailing" secondItem="vtx-SY-zGc" secondAttribute="trailing" constant="20" id="bRg-Ay-EmG"/>
                             <constraint firstItem="0oV-WO-p08" firstAttribute="trailing" secondItem="GAU-Bd-eLn" secondAttribute="trailing" constant="20" id="ljf-dm-fkK"/>
+                            <constraint firstItem="MX0-Ae-qPk" firstAttribute="centerX" secondItem="MLO-jb-dhS" secondAttribute="centerX" id="mQd-7B-TZa"/>
                             <constraint firstItem="vtx-SY-zGc" firstAttribute="leading" secondItem="0oV-WO-p08" secondAttribute="leading" constant="20" id="qbG-jY-gqg"/>
                             <constraint firstItem="1Vj-nU-FXb" firstAttribute="top" secondItem="GAU-Bd-eLn" secondAttribute="bottom" constant="80" id="vZ9-K1-inD"/>
+                            <constraint firstItem="MX0-Ae-qPk" firstAttribute="top" secondItem="vtx-SY-zGc" secondAttribute="bottom" constant="30" id="vev-2I-TvB"/>
                             <constraint firstItem="GAU-Bd-eLn" firstAttribute="top" secondItem="0oV-WO-p08" secondAttribute="top" constant="50" id="yh4-u3-wKg"/>
                         </constraints>
                     </view>
@@ -269,6 +278,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="1Vj-nU-FXb" id="JG3-7J-mag"/>
                         <outlet property="passwordTextField" destination="Eqo-OO-EWD" id="05U-xC-Zsr"/>
+                        <outlet property="signInButton" destination="MX0-Ae-qPk" id="2qd-DA-bh8"/>
                         <segue destination="CpV-hE-pRO" kind="show" identifier="loginToRegisterSegue" id="q4c-SI-8uG"/>
                     </connections>
                 </viewController>
