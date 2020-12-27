@@ -8,8 +8,9 @@
 import UIKit
 import Foundation
 import Firebase
+import GoogleSignIn
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController{
     
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -24,7 +25,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
       
         
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,6 +50,8 @@ class ProfileViewController: UIViewController {
     
     @IBAction func LogOutButtonTapped(_ sender: UIBarButtonItem) {
         let firebaseAuth = Auth.auth()
+        GIDSignIn.sharedInstance().signOut()
+        
         do {
             try firebaseAuth.signOut()
             let loginNavController = self.storyboard?.instantiateViewController(identifier: "LoginNavigationController")
@@ -60,12 +62,4 @@ class ProfileViewController: UIViewController {
         }
     }
     
-}
-
-extension UINavigationController {
-    func popToViewController(ofClass: AnyClass, animated: Bool = true) {
-        if let vc = viewControllers.last(where: { $0.isKind(of: ofClass) }) {
-            popToViewController(vc, animated: animated)
-        }
-    }
 }

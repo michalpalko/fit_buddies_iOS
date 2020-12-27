@@ -16,7 +16,13 @@ class BodyPartsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let myCreds = UserDefaults.standard.string(forKey: "user_uid_key") {
+            print(myCreds.description)
+        }
+        
+        if let email = Auth.auth().currentUser?.email {
+        print("EMAIL : \(email)")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

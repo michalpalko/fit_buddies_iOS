@@ -8,11 +8,14 @@
 import Foundation
 import UIKit
 import Firebase
+import GoogleSignIn
 
 class LoginViewController : UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signInButton: GIDSignInButton!
+    
     private let segues = Strings.Segues.init()
     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
@@ -20,7 +23,7 @@ class LoginViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        GIDSignIn.sharedInstance()?.presentingViewController = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,7 +49,9 @@ class LoginViewController : UIViewController {
             }
         }
     }
+    
     @IBAction func registerButtonTapped(_ sender: UIButton) {
         performSegue(withIdentifier: segues.segue_loginToRegistration , sender: self)
     }
+    
 }

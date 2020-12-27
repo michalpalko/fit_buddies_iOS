@@ -12,5 +12,6 @@ target 'Fit Buddies' do
   pod 'FirebaseUI/Google'
   pod 'FirebaseUI/Facebook'
   pod 'FirebaseUI/OAuth'
+  pod 'GoogleSignIn'
 
 end
