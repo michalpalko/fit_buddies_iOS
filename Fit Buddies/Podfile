@@ -13,5 +13,9 @@ target 'Fit Buddies' do
   pod 'FirebaseUI/Facebook'
   pod 'FirebaseUI/OAuth'
   pod 'GoogleSignIn'
+  
+  pod “FBSDKCoreKit”
+  pod “FBSDKLoginKit”
+  pod “FBSDKShareKit”
 
 end

@@ -19,6 +19,8 @@ class ProfileViewController: UIViewController{
     
     var handle: AuthStateDidChangeListenerHandle?
     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    var user = Auth.auth().currentUser
 
     
     override func viewDidLoad() {
@@ -30,16 +32,27 @@ class ProfileViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             if let user = user {
-             // let uid = user.uid
+//              let uid = user.uid
               let email = user.email
-            //  let photoURL = user.photoURL
+                let name = user.displayName
               //var multiFactorString = "MultiFactor: "
     //          for info in user.multiFactor.enrolledFactors {
     //            multiFactorString += info.displayName ?? "[DispayName]"
     //            multiFactorString += " "
     //          }
-                
+            
+
+                if let photoURL = user.photoURL {
+                    DispatchQueue.global().async {
+                        let data = try? Data(contentsOf: photoURL)
+                        DispatchQueue.main.async {
+                            self.profilePictureImageView.image = UIImage(data: data!)
+                        }
+                    }
+                }
+                self.nameLabel.text = name
                 self.emailLabel.text = email
+                
             }
         }
     }
