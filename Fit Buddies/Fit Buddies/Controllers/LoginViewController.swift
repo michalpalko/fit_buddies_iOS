@@ -21,7 +21,6 @@ class LoginViewController : UIViewController, LoginButtonDelegate {
     
     let loginButton = FBLoginButton()
     
-    private let segues = Strings.Segues.init()
     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     
@@ -59,7 +58,7 @@ class LoginViewController : UIViewController, LoginButtonDelegate {
     }
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: segues.segue_loginToRegistration , sender: self)
+        performSegue(withIdentifier: Strings.Segues.segue_loginToRegistration , sender: self)
     }
     
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {

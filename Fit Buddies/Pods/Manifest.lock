@@ -388,11 +388,13 @@ DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
+  - Firebase/Firestore
   - FirebaseUI
   - FirebaseUI/Auth
   - FirebaseUI/Facebook
   - FirebaseUI/Google
   - FirebaseUI/OAuth
+  - FirebaseUI/Storage
   - GoogleSignIn
 
 SPEC REPOS:
@@ -450,6 +452,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   SDWebImage: f66a16b95183b92ed6b965ad21d33167bc07612d
 
-PODFILE CHECKSUM: c17a5a3b2748115e760176a0f8811b123f558774
+PODFILE CHECKSUM: e246e36418fdc31a56658c265623b8777ae514da
 
 COCOAPODS: 1.10.0

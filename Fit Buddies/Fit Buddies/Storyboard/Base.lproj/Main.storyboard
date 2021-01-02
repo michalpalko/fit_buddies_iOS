@@ -43,17 +43,46 @@
             </objects>
             <point key="canvasLocation" x="522" y="-489"/>
         </scene>
-        <!--View Controller-->
+        <!--Bodypart selection-->
         <scene sceneID="lD1-Ip-MSI">
             <objects>
-                <viewController id="dpg-Ez-Qaa" sceneMemberID="viewController">
+                <viewController id="dpg-Ez-Qaa" customClass="BodyPartsViewController" customModule="Fit_Buddies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aYD-o7-zOZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bwr-jG-BLC">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bodypart_tv_cell" id="14j-EY-ctd">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="14j-EY-ctd" id="qSi-6x-YSH" customClass="BodyPartTableViewCell" customModule="Fit_Buddies" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dpg-Ez-Qaa" id="g3c-Vw-HrT"/>
+                                    <outlet property="delegate" destination="dpg-Ez-Qaa" id="thx-RI-ZDC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="61U-te-tiT"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="61U-te-tiT" firstAttribute="trailing" secondItem="Bwr-jG-BLC" secondAttribute="trailing" id="36T-6G-eV8"/>
+                            <constraint firstItem="Bwr-jG-BLC" firstAttribute="top" secondItem="61U-te-tiT" secondAttribute="top" id="PsE-nc-ykG"/>
+                            <constraint firstItem="61U-te-tiT" firstAttribute="bottom" secondItem="Bwr-jG-BLC" secondAttribute="bottom" id="ZAo-7i-zVk"/>
+                            <constraint firstItem="Bwr-jG-BLC" firstAttribute="leading" secondItem="61U-te-tiT" secondAttribute="leading" id="dF6-Xb-dMB"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="eHe-yR-UFF"/>
+                    <navigationItem key="navigationItem" title="Bodypart selection" id="eHe-yR-UFF"/>
+                    <connections>
+                        <outlet property="tableView" destination="Bwr-jG-BLC" id="Tmm-VL-Zgt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqH-er-QCB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
