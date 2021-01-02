@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21843D59259A0C0100BE5FCB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21843D58259A0C0100BE5FCB /* User.swift */; };
+		21843D5C259A0C2400BE5FCB /* BodyPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21843D5B259A0C2400BE5FCB /* BodyPart.swift */; };
+		21843D60259A0C5000BE5FCB /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21843D5F259A0C5000BE5FCB /* Exercise.swift */; };
+		21843D63259A0CF100BE5FCB /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21843D62259A0CF100BE5FCB /* Machine.swift */; };
+		21843D66259A0D6200BE5FCB /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21843D65259A0D6200BE5FCB /* Tip.swift */; };
+		21843D6A259A10DC00BE5FCB /* SubBodyPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21843D69259A10DC00BE5FCB /* SubBodyPart.swift */; };
+		21843D9125A0D16F00BE5FCB /* BodyPartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21843D8F25A0D16F00BE5FCB /* BodyPartTableViewCell.swift */; };
+		21843D9225A0D16F00BE5FCB /* BodyPartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21843D9025A0D16F00BE5FCB /* BodyPartTableViewCell.xib */; };
 		21B163D42597E65800096ECA /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B163D32597E65800096ECA /* RegistrationViewController.swift */; };
 		21B163DE2597EC0900096ECA /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B163DD2597EC0900096ECA /* Strings.swift */; };
 		21B163E12597F1E400096ECA /* BodyPartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B163E02597F1E400096ECA /* BodyPartsViewController.swift */; };
@@ -23,6 +31,14 @@
 
 /* Begin PBXFileReference section */
 		053470D6766D911452D82A99 /* Pods-Fit Buddies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit Buddies.release.xcconfig"; path = "Target Support Files/Pods-Fit Buddies/Pods-Fit Buddies.release.xcconfig"; sourceTree = "<group>"; };
+		21843D58259A0C0100BE5FCB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		21843D5B259A0C2400BE5FCB /* BodyPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPart.swift; sourceTree = "<group>"; };
+		21843D5F259A0C5000BE5FCB /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		21843D62259A0CF100BE5FCB /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
+		21843D65259A0D6200BE5FCB /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		21843D69259A10DC00BE5FCB /* SubBodyPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubBodyPart.swift; sourceTree = "<group>"; };
+		21843D8F25A0D16F00BE5FCB /* BodyPartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPartTableViewCell.swift; sourceTree = "<group>"; };
+		21843D9025A0D16F00BE5FCB /* BodyPartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyPartTableViewCell.xib; sourceTree = "<group>"; };
 		21B163D32597E65800096ECA /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		21B163DD2597EC0900096ECA /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		21B163E02597F1E400096ECA /* BodyPartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPartsViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +74,28 @@
 				F6B50ABBD9898B39B468DBBA /* Pods_Fit_Buddies.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		21843D5E259A0C3200BE5FCB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				21843D58259A0C0100BE5FCB /* User.swift */,
+				21843D5B259A0C2400BE5FCB /* BodyPart.swift */,
+				21843D5F259A0C5000BE5FCB /* Exercise.swift */,
+				21843D62259A0CF100BE5FCB /* Machine.swift */,
+				21843D65259A0D6200BE5FCB /* Tip.swift */,
+				21843D69259A10DC00BE5FCB /* SubBodyPart.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		21843D9425A0D17D00BE5FCB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				21843D8F25A0D16F00BE5FCB /* BodyPartTableViewCell.swift */,
+				21843D9025A0D16F00BE5FCB /* BodyPartTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		21B163CC2597708B00096ECA /* Storyboard */ = {
@@ -117,6 +155,8 @@
 				21B163CE259770C800096ECA /* Controllers */,
 				21B163CC2597708B00096ECA /* Storyboard */,
 				52F4364E257BA0CE0040A4D0 /* Assets.xcassets */,
+				21843D5E259A0C3200BE5FCB /* Models */,
+				21843D9425A0D17D00BE5FCB /* Views */,
 			);
 			path = "Fit Buddies";
 			sourceTree = "<group>";
@@ -193,6 +233,7 @@
 				52F43652257BA0CE0040A4D0 /* LaunchScreen.storyboard in Resources */,
 				52F4364F257BA0CE0040A4D0 /* Assets.xcassets in Resources */,
 				5284165F2585819B00D708DF /* GoogleService-Info.plist in Resources */,
+				21843D9225A0D16F00BE5FCB /* BodyPartTableViewCell.xib in Resources */,
 				52F4364D257BA0CA0040A4D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,9 +307,16 @@
 				52F4364A257BA0CA0040A4D0 /* LoginViewController.swift in Sources */,
 				52F43646257BA0CA0040A4D0 /* AppDelegate.swift in Sources */,
 				21B163DE2597EC0900096ECA /* Strings.swift in Sources */,
+				21843D63259A0CF100BE5FCB /* Machine.swift in Sources */,
 				21B163E12597F1E400096ECA /* BodyPartsViewController.swift in Sources */,
+				21843D59259A0C0100BE5FCB /* User.swift in Sources */,
+				21843D9125A0D16F00BE5FCB /* BodyPartTableViewCell.swift in Sources */,
+				21843D60259A0C5000BE5FCB /* Exercise.swift in Sources */,
 				21B163E42598ABF100096ECA /* ProfileViewController.swift in Sources */,
+				21843D6A259A10DC00BE5FCB /* SubBodyPart.swift in Sources */,
 				21B163D42597E65800096ECA /* RegistrationViewController.swift in Sources */,
+				21843D66259A0D6200BE5FCB /* Tip.swift in Sources */,
+				21843D5C259A0C2400BE5FCB /* BodyPart.swift in Sources */,
 				52F43648257BA0CA0040A4D0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

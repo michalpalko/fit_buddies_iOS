@@ -21,27 +21,27 @@ class ProfileViewController: UIViewController{
     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     var user = Auth.auth().currentUser
-
+    let db = Firestore.firestore()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             if let user = user {
-//              let uid = user.uid
-              let email = user.email
+                //              let uid = user.uid
+                let email = user.email
                 let name = user.displayName
-              //var multiFactorString = "MultiFactor: "
-    //          for info in user.multiFactor.enrolledFactors {
-    //            multiFactorString += info.displayName ?? "[DispayName]"
-    //            multiFactorString += " "
-    //          }
-            
-
+                //var multiFactorString = "MultiFactor: "
+                //          for info in user.multiFactor.enrolledFactors {
+                //            multiFactorString += info.displayName ?? "[DispayName]"
+                //            multiFactorString += " "
+                //          }
+                
+                
                 if let photoURL = user.photoURL {
                     DispatchQueue.global().async {
                         let data = try? Data(contentsOf: photoURL)
@@ -69,7 +69,7 @@ class ProfileViewController: UIViewController{
             try firebaseAuth.signOut()
             let loginNavController = self.storyboard?.instantiateViewController(identifier: "LoginNavigationController")
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(loginNavController!)
-
+            
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
