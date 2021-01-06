@@ -18,6 +18,7 @@ class SubBodyPartsViewController: UIViewController {
     let db = Firestore.firestore()
     var bodyPartid = ""
     var titleLabel = ""
+    var selectedSubBodyPart : SubBodyPart?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +71,13 @@ class SubBodyPartsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //TODO: prepare for segues
+        if segue.identifier == Strings.Segues.segue_subBodyPartToExercises {
+            if let exercisesVC = segue.destination as? ExercisesViewController {
+                exercisesVC.bodyPartid = bodyPartid
+                exercisesVC.subBodyPartId = selectedSubBodyPart!.id
+                exercisesVC.subBodyPartTitle = selectedSubBodyPart!.title
+            }
+        }
     }
 }
 
@@ -105,8 +112,8 @@ extension SubBodyPartsViewController : UITableViewDataSource {
     extension SubBodyPartsViewController : UITableViewDelegate {
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             tableView.deselectRow(at: indexPath, animated: true)
-            
-            performSegue(withIdentifier: <#T##String#>, sender: self)
+            selectedSubBodyPart = subBodyParts[indexPath.row]
+            performSegue(withIdentifier: Strings.Segues.segue_subBodyPartToExercises, sender: self)
         }
         
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

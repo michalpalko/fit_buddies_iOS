@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2166CFB525A641CE00C9B01B /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166CFB425A641CE00C9B01B /* ExercisesViewController.swift */; };
+		2166CFB925A6434A00C9B01B /* ExerciseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166CFB725A6434A00C9B01B /* ExerciseCollectionViewCell.swift */; };
+		2166CFBA25A6434A00C9B01B /* ExerciseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2166CFB825A6434A00C9B01B /* ExerciseCollectionViewCell.xib */; };
 		216E88D325A0FD570027B139 /* SubBodyPartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E88D125A0FD570027B139 /* SubBodyPartTableViewCell.swift */; };
 		216E88D425A0FD570027B139 /* SubBodyPartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 216E88D225A0FD570027B139 /* SubBodyPartTableViewCell.xib */; };
 		216E88D725A0FDA10027B139 /* SubBodyPartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E88D625A0FDA10027B139 /* SubBodyPartsViewController.swift */; };
@@ -34,6 +37,9 @@
 
 /* Begin PBXFileReference section */
 		053470D6766D911452D82A99 /* Pods-Fit Buddies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit Buddies.release.xcconfig"; path = "Target Support Files/Pods-Fit Buddies/Pods-Fit Buddies.release.xcconfig"; sourceTree = "<group>"; };
+		2166CFB425A641CE00C9B01B /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
+		2166CFB725A6434A00C9B01B /* ExerciseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCollectionViewCell.swift; sourceTree = "<group>"; };
+		2166CFB825A6434A00C9B01B /* ExerciseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseCollectionViewCell.xib; sourceTree = "<group>"; };
 		216E88D125A0FD570027B139 /* SubBodyPartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubBodyPartTableViewCell.swift; sourceTree = "<group>"; };
 		216E88D225A0FD570027B139 /* SubBodyPartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubBodyPartTableViewCell.xib; sourceTree = "<group>"; };
 		216E88D625A0FDA10027B139 /* SubBodyPartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubBodyPartsViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +108,8 @@
 				21843D9025A0D16F00BE5FCB /* BodyPartTableViewCell.xib */,
 				216E88D125A0FD570027B139 /* SubBodyPartTableViewCell.swift */,
 				216E88D225A0FD570027B139 /* SubBodyPartTableViewCell.xib */,
+				2166CFB725A6434A00C9B01B /* ExerciseCollectionViewCell.swift */,
+				2166CFB825A6434A00C9B01B /* ExerciseCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 				21B163E02597F1E400096ECA /* BodyPartsViewController.swift */,
 				21B163E32598ABF100096ECA /* ProfileViewController.swift */,
 				216E88D625A0FDA10027B139 /* SubBodyPartsViewController.swift */,
+				2166CFB425A641CE00C9B01B /* ExercisesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -240,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F43652257BA0CE0040A4D0 /* LaunchScreen.storyboard in Resources */,
+				2166CFBA25A6434A00C9B01B /* ExerciseCollectionViewCell.xib in Resources */,
 				52F4364F257BA0CE0040A4D0 /* Assets.xcassets in Resources */,
 				5284165F2585819B00D708DF /* GoogleService-Info.plist in Resources */,
 				216E88D425A0FD570027B139 /* SubBodyPartTableViewCell.xib in Resources */,
@@ -318,9 +328,11 @@
 				52F43646257BA0CA0040A4D0 /* AppDelegate.swift in Sources */,
 				21B163DE2597EC0900096ECA /* Strings.swift in Sources */,
 				21843D63259A0CF100BE5FCB /* Machine.swift in Sources */,
+				2166CFB525A641CE00C9B01B /* ExercisesViewController.swift in Sources */,
 				21B163E12597F1E400096ECA /* BodyPartsViewController.swift in Sources */,
 				21843D59259A0C0100BE5FCB /* User.swift in Sources */,
 				21843D9125A0D16F00BE5FCB /* BodyPartTableViewCell.swift in Sources */,
+				2166CFB925A6434A00C9B01B /* ExerciseCollectionViewCell.swift in Sources */,
 				21843D60259A0C5000BE5FCB /* Exercise.swift in Sources */,
 				216E88D725A0FDA10027B139 /* SubBodyPartsViewController.swift in Sources */,
 				21B163E42598ABF100096ECA /* ProfileViewController.swift in Sources */,

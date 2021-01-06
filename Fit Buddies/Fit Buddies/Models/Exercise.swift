@@ -12,9 +12,10 @@ struct Exercise {
     
     var id:String
     var title:String
-    var baseDscription:String
-    var aimedMainBodyPart:BodyPart
-    var aimedSubPart:SubBodyPart
+    var baseDescription:String
+    //var aimedMainBodyPartId:String
+    //var aimedSubPartId:String
+    var imageUrl:String
 //    var startPositionImage:UIImage
 //    var endPositionImage:UIImage
 //
