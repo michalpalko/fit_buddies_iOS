@@ -16,6 +16,7 @@ class BodyPartsViewController: UIViewController {
     var handle: AuthStateDidChangeListenerHandle?
     let db = Firestore.firestore()
     var bodyPartsArray = Array<BodyPart>()
+    var selectedBodyPart : BodyPart?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +55,7 @@ class BodyPartsViewController: UIViewController {
                         let data = document.data()
                         if let title = data["title"] as? String, let imageUrl = data["imageUrl"] as? String{
                             print("PART TITLE: \(title), PART URL: \(imageUrl)")
-                            let bodyPart = BodyPart(title: title, image: imageUrl)
+                            let bodyPart = BodyPart(id: document.documentID, title: title, image: imageUrl)
                             self.bodyPartsArray.append(bodyPart)
                             DispatchQueue.main.async {
                                 self.tableView?.reloadData()
@@ -62,6 +63,15 @@ class BodyPartsViewController: UIViewController {
                         }
                     }
                 }
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Strings.Segues.segue_bodyToSubBodyParts{
+            if let subBodyPartController = segue.destination as? SubBodyPartsViewController {
+                subBodyPartController.bodyPartid = selectedBodyPart!.id
+                subBodyPartController.titleLabel = selectedBodyPart!.title
             }
         }
     }
@@ -101,7 +111,9 @@ extension BodyPartsViewController : UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedBodyPart = bodyPartsArray[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: Strings.Segues.segue_bodyToSubBodyParts, sender: self)
     }
     
 }

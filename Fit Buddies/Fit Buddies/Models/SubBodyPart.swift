@@ -11,8 +11,8 @@ import UIKit
 struct SubBodyPart{
     var id:String
     var title:String
-    var image:UIImage
-    var bodypart:BodyPart
-    var exercises:[Exercise]
-    var tips:[Tip]
+    var image:String
+//    var bodypart:BodyPart
+//    var exercises:[Exercise]
+//    var tips:[Tip]
 }

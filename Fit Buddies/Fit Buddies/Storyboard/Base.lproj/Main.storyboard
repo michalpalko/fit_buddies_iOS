@@ -82,11 +82,57 @@
                     <navigationItem key="navigationItem" title="Bodypart selection" id="eHe-yR-UFF"/>
                     <connections>
                         <outlet property="tableView" destination="Bwr-jG-BLC" id="Tmm-VL-Zgt"/>
+                        <segue destination="Sxq-0G-686" kind="show" identifier="bodyPartsToSubBodyPartsSegue" id="5eA-Qo-CtS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqH-er-QCB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1258" y="-490"/>
+        </scene>
+        <!--Sub Body Parts View Controller-->
+        <scene sceneID="7qh-zW-kBK">
+            <objects>
+                <viewController id="Sxq-0G-686" customClass="SubBodyPartsViewController" customModule="Fit_Buddies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zyr-Kf-dH5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nnc-ZU-Sxc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dgK-mB-bsA">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dgK-mB-bsA" id="bXT-rT-ibu" customClass="SubBodyPartTableViewCell" customModule="Fit_Buddies" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Sxq-0G-686" id="trQ-Yz-nHt"/>
+                                    <outlet property="delegate" destination="Sxq-0G-686" id="xkN-ej-hXh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YuR-YB-Kh7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nnc-ZU-Sxc" firstAttribute="top" secondItem="YuR-YB-Kh7" secondAttribute="top" id="1Cr-iP-dz2"/>
+                            <constraint firstItem="YuR-YB-Kh7" firstAttribute="bottom" secondItem="nnc-ZU-Sxc" secondAttribute="bottom" id="A5c-Ha-yW8"/>
+                            <constraint firstItem="nnc-ZU-Sxc" firstAttribute="leading" secondItem="YuR-YB-Kh7" secondAttribute="leading" id="dCy-b3-cDn"/>
+                            <constraint firstItem="YuR-YB-Kh7" firstAttribute="trailing" secondItem="nnc-ZU-Sxc" secondAttribute="trailing" id="wmD-tb-JBu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kgc-1g-fYr"/>
+                    <connections>
+                        <outlet property="tableView" destination="nnc-ZU-Sxc" id="w6N-Zm-dpK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2em-PD-5Dc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1965" y="-490"/>
         </scene>
         <!--Body Parts View Controller-->
         <scene sceneID="Hnd-4z-DF4">

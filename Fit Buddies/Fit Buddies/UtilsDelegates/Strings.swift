@@ -14,14 +14,17 @@ struct Strings {
     
     struct Segues {
         static let segue_loginToRegistration = "loginToRegisterSegue"
+        static let segue_bodyToSubBodyParts = "bodyPartsToSubBodyPartsSegue"
     }
     
     struct Identifiers {
         static let bodyPart_cell = "bodypart_tv_cell"
+        static let subBodyPart_cell = "subbodypart_tv_cell"
     }
     
     struct Firestore {
         static let BodypartsCollection = "BodyParts"
+        static let SubBodypartsCollection = "SubBodyParts"
     }
 }
 

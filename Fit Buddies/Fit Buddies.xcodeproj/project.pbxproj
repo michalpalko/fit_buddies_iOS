@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		216E88D325A0FD570027B139 /* SubBodyPartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E88D125A0FD570027B139 /* SubBodyPartTableViewCell.swift */; };
+		216E88D425A0FD570027B139 /* SubBodyPartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 216E88D225A0FD570027B139 /* SubBodyPartTableViewCell.xib */; };
+		216E88D725A0FDA10027B139 /* SubBodyPartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E88D625A0FDA10027B139 /* SubBodyPartsViewController.swift */; };
 		21843D59259A0C0100BE5FCB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21843D58259A0C0100BE5FCB /* User.swift */; };
 		21843D5C259A0C2400BE5FCB /* BodyPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21843D5B259A0C2400BE5FCB /* BodyPart.swift */; };
 		21843D60259A0C5000BE5FCB /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21843D5F259A0C5000BE5FCB /* Exercise.swift */; };
@@ -31,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		053470D6766D911452D82A99 /* Pods-Fit Buddies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit Buddies.release.xcconfig"; path = "Target Support Files/Pods-Fit Buddies/Pods-Fit Buddies.release.xcconfig"; sourceTree = "<group>"; };
+		216E88D125A0FD570027B139 /* SubBodyPartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubBodyPartTableViewCell.swift; sourceTree = "<group>"; };
+		216E88D225A0FD570027B139 /* SubBodyPartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubBodyPartTableViewCell.xib; sourceTree = "<group>"; };
+		216E88D625A0FDA10027B139 /* SubBodyPartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubBodyPartsViewController.swift; sourceTree = "<group>"; };
 		21843D58259A0C0100BE5FCB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		21843D5B259A0C2400BE5FCB /* BodyPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPart.swift; sourceTree = "<group>"; };
 		21843D5F259A0C5000BE5FCB /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
@@ -94,6 +100,8 @@
 			children = (
 				21843D8F25A0D16F00BE5FCB /* BodyPartTableViewCell.swift */,
 				21843D9025A0D16F00BE5FCB /* BodyPartTableViewCell.xib */,
+				216E88D125A0FD570027B139 /* SubBodyPartTableViewCell.swift */,
+				216E88D225A0FD570027B139 /* SubBodyPartTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +132,7 @@
 				21B163D32597E65800096ECA /* RegistrationViewController.swift */,
 				21B163E02597F1E400096ECA /* BodyPartsViewController.swift */,
 				21B163E32598ABF100096ECA /* ProfileViewController.swift */,
+				216E88D625A0FDA10027B139 /* SubBodyPartsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +242,7 @@
 				52F43652257BA0CE0040A4D0 /* LaunchScreen.storyboard in Resources */,
 				52F4364F257BA0CE0040A4D0 /* Assets.xcassets in Resources */,
 				5284165F2585819B00D708DF /* GoogleService-Info.plist in Resources */,
+				216E88D425A0FD570027B139 /* SubBodyPartTableViewCell.xib in Resources */,
 				21843D9225A0D16F00BE5FCB /* BodyPartTableViewCell.xib in Resources */,
 				52F4364D257BA0CA0040A4D0 /* Main.storyboard in Resources */,
 			);
@@ -312,8 +322,10 @@
 				21843D59259A0C0100BE5FCB /* User.swift in Sources */,
 				21843D9125A0D16F00BE5FCB /* BodyPartTableViewCell.swift in Sources */,
 				21843D60259A0C5000BE5FCB /* Exercise.swift in Sources */,
+				216E88D725A0FDA10027B139 /* SubBodyPartsViewController.swift in Sources */,
 				21B163E42598ABF100096ECA /* ProfileViewController.swift in Sources */,
 				21843D6A259A10DC00BE5FCB /* SubBodyPart.swift in Sources */,
+				216E88D325A0FD570027B139 /* SubBodyPartTableViewCell.swift in Sources */,
 				21B163D42597E65800096ECA /* RegistrationViewController.swift in Sources */,
 				21843D66259A0D6200BE5FCB /* Tip.swift in Sources */,
 				21843D5C259A0C2400BE5FCB /* BodyPart.swift in Sources */,
