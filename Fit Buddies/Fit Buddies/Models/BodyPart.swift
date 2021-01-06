@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct BodyPart {
-    
+    var id:String
     var title:String
     var image:String
 //    var subBodyParts:[SubBodyPart]
