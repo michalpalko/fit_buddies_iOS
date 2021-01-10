@@ -45,7 +45,7 @@ class ExercisesViewController: UIViewController {
             if let e = error {
                 print("ERROR LOADING DOCUMENTS: \(e.localizedDescription)")
             } else {
-                print("COLLECTION PATH \(self.db.collection(Strings.Firestore.BodypartsCollection).document(self.bodyPartid).collection(Strings.Firestore.SubBodypartsCollection).document(self.subBodyPartId).collection(Strings.Firestore.ExercisesCollection))")
+//                print("COLLECTION PATH \(self.db.collection(Strings.Firestore.BodypartsCollection).document(self.bodyPartid).collection(Strings.Firestore.SubBodypartsCollection).document(self.subBodyPartId).collection(Strings.Firestore.ExercisesCollection))")
                 if let documents = querySnapshot?.documents {
                     for document in documents {
                         let data = document.data()
@@ -58,6 +58,18 @@ class ExercisesViewController: UIViewController {
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Strings.Segues.segue_exercisesToExerciseDetail {
+            if let exerciseDetailVC = segue.destination as? ExerciseDetailViewController {
+                exerciseDetailVC.bodyPartid = bodyPartid
+                exerciseDetailVC.subBodyPartId = subBodyPartId
+                if let exercise = selectedExercise {
+                    exerciseDetailVC.exercise = exercise
                 }
             }
         }
@@ -92,6 +104,8 @@ extension ExercisesViewController:UICollectionViewDataSource{
 extension ExercisesViewController:UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        selectedExercise = exercisesArray[indexPath.row]
+        performSegue(withIdentifier: Strings.Segues.segue_exercisesToExerciseDetail, sender: self)
     }
     
     
